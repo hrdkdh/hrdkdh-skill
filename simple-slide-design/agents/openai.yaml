@@ -1,0 +1,4 @@
+interface:
+  display_name: "Simple Slide Design"
+  short_description: "Create restrained, readable executive presentation slides"
+  default_prompt: "Use $simple-slide-design to redesign this presentation with a clear hierarchy and minimal visual noise."
