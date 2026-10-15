@@ -99,7 +99,7 @@ $make-pcloud-docker-image 현재 앱을 P-Cloud용 linux/amd64 TAR 이미지로 
 
 `posco-report-coach`는 한국어 지침으로 보고서 검수 외에도 빈칸 보고서 설계, 경영진용 1쪽 요약, 예상 질문·답변 준비, 주장별 근거 점검을 지원합니다. 개선 시안 이미지는 실행 환경의 이미지 생성 또는 렌더링 도구가 있을 때 제작하며, 도구가 없으면 문안과 배치 명세를 제공합니다. 교재 기반 원칙과 AI용 보완의 구분은 [출처 지도](posco-report-coach/references/source-map.md)에서 확인할 수 있습니다.
 
-`make-pcloud-docker-image`는 Windows/WSL 기반 P-Cloud 이미지 제작에서 Docker 데몬과 BuildKit 사전점검, 사내 CA의 안전한 전달, Rocky Linux 이미지 구성, 컨테이너 기동 확인, TAR 및 체크섬 산출을 다룹니다. WSL 제어 채널 장애와 단순 Dockerfile 오류를 구분하고, 실제 산출물 검증 전에는 완료로 판단하지 않습니다.
+`make-pcloud-docker-image`는 Windows/WSL 기반 P-Cloud 이미지 제작에서 Docker 데몬과 BuildKit 사전점검, 사내 CA의 안전한 전달 또는 오프라인 의존성 준비, Rocky Linux 이미지 구성, 컨테이너 기동 확인, TAR 및 체크섬 산출을 다룹니다. WSL 제어 채널 장애와 단순 Dockerfile 오류를 구분하고, 장시간 빌드에는 제한형 relay/keepalive 복구를 적용하며, 실제 산출물 검증 전에는 완료로 판단하지 않습니다.
 
 ## Adding a skill
 

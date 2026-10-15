@@ -76,4 +76,4 @@ Never treat Extra Hosts as an API endpoint setting: it changes name resolution o
 
 ## WSL failure handling
 
-If `wsl.exe` returns `-1`, produces no useful output, shows `ExpectedMessage LxInitMessageExitStatus`, or a build ends with `context canceled`, stop treating it as a Dockerfile failure. Read [references/wsl-recovery.md](references/wsl-recovery.md), preserve the exact error evidence, and avoid repeated builds until the WSL control path is healthy.
+If `wsl.exe` returns `-1`, produces no useful output, shows `ExpectedMessage LxInitMessageExitStatus`, or a build ends with `context canceled`, stop treating it as a Dockerfile failure. Read [references/wsl-recovery.md](references/wsl-recovery.md), preserve the exact error evidence, and distinguish a failed Windows/WSL output relay from an unhealthy distribution or Docker daemon. Avoid repeated full builds; use bounded launch probes and, only when evidence supports it, the detached-build and pulse-keepalive recovery described there.
