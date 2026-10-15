@@ -1,9 +1,9 @@
 ---
-name: pcloud-linux-image
+name: make-pcloud-docker-image
 description: Build, verify, and export Linux amd64 Docker images for P-Cloud from a corporate Windows PC, including WSL Docker checks, internal CA handling, runtime environment variables, ports, volumes, outbound hosts, and TAR evidence. Use for P-Cloud container packaging or when a Windows/WSL Docker build fails before image export. Do not use for ordinary local development that does not involve container delivery.
 ---
 
-# P-Cloud Linux Image
+# Make P-Cloud Docker Image
 
 Produce a deployable artifact and evidence, not merely a plausible Dockerfile.
 
