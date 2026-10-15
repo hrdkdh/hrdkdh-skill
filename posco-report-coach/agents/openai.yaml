@@ -1,0 +1,4 @@
+interface:
+  display_name: "posco-report-coach"
+  short_description: "경영진 보고서의 논리·문장·디자인을 검토하고 개선하는 실무 코치"
+  default_prompt: "$posco-report-coach 첨부한 보고서를 검토하고 우선 수정사항과 개선 문안을 제시해 주세요."
